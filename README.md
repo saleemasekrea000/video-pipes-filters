@@ -38,3 +38,17 @@ Install the required Python packages:
 
 ```bash
 pip install opencv-python
+```
+
+## Run the Project
+
+To run the video processing pipeline, follow these steps:
+
+1. **Clone the Repository**:
+   ```bash
+   git clone git@github.com:saleemasekrea000/video-pipes-filters.git
+   ```
+2. **run the main file**:
+   ```bash
+   python3 main.py
+   ```
