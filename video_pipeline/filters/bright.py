@@ -9,8 +9,8 @@ class BrightGaussianNoiseFilter(Filter):
         self.mean = mean
         self.sigma = sigma
 
-    def apply_filter(self, frame):
-        print("applying BrightGaussianNoiseFilter")
+    def apply_filter(self, frame, timestamp):
+        print("bright gaussian noise filter", timestamp, "ms")
         noise = np.random.normal(self.mean, self.sigma, frame.shape).astype(np.uint8)
         noisy_frame = cv2.add(frame, noise)
         return noisy_frame

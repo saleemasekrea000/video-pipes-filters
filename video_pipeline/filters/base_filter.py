@@ -3,7 +3,7 @@ class Filter:
         self.input_queue = input_queue
         self.output_queue = output_queue
 
-    def apply_filter(self, frame):
+    def apply_filter(self, frame, timestamp):
         pass
 
     def run(self):
@@ -13,5 +13,5 @@ class Filter:
                 self.output_queue.put(None)
                 break
             timestamp, frame = frame
-            processed_frame = self.apply_filter(frame)
+            processed_frame = self.apply_filter(frame, timestamp)
             self.output_queue.put((timestamp, processed_frame))

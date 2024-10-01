@@ -20,7 +20,8 @@ class FrameDisplay:
             cv2.imshow("Input", original_frame)
             cv2.imshow("Output", filtered_frame)
 
-            if cv2.waitKey(20) & 0xFF == ord("q"):
+            # allows for fast updates while still checking for user interaction.
+            if cv2.waitKey(1) & 0xFF == ord("q"):
                 break
 
         cv2.destroyAllWindows()

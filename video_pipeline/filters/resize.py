@@ -7,6 +7,6 @@ class ResizeFilter(Filter):
         super().__init__(input_queue, output_queue)
         self.size = size
 
-    def apply_filter(self, frame):
-        print("applying ResizeFilter")
+    def apply_filter(self, frame, timestamp):
+        print("resize filter", timestamp, "ms")
         return cv2.resize(frame, self.size)
