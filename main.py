@@ -15,8 +15,8 @@ def main():
     queues = [queue.Queue() for _ in range(5)]
 
     # Start video capture from a file
-    # video_url = "resources/vv.mp4"
-    video_url =0
+    video_url = "polish-cow.mp4"  # Change this to the path of your video file
+    # video_url =0
     video_capture = VideoCapture(queues[0], video_url)
     capture_thread = threading.Thread(target=video_capture.run)
     capture_thread.start()

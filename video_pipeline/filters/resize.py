@@ -8,5 +8,5 @@ class ResizeFilter(Filter):
         self.size = size
 
     def apply_filter(self, frame, timestamp):
-        print("resize filter", timestamp, "ms")
+        # print("resize filter", timestamp, "ms")
         return cv2.resize(frame, self.size)
